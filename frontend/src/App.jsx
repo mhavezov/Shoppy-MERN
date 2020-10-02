@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,9 +8,9 @@ import ProductsPage from './pages/ProductsPage';
 
 function App() {
   return (
-    <BrowserRouter>
-      <>
-        <Header />
+    <>
+      <Header />
+      <Switch>
         <main className='py-3'>
           <Container>
             <Route exact path='/' component={HomePage} />
@@ -18,8 +18,8 @@ function App() {
           </Container>
         </main>
         <Footer />
-      </>
-    </BrowserRouter>
+      </Switch>
+    </>
   );
 }
 
