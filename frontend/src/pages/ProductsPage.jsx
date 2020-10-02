@@ -36,7 +36,7 @@ const ProductsPage = ({ match }) => {
               <ListGroup.Item>
                 <Row>
                   <Col>Price:</Col>
-                  <Col>${product.price}</Col>
+                  <Col className='product-price'>${product.price}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>

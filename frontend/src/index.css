@@ -8,3 +8,7 @@ h3 {
 .rating-text {
   margin: 0 0.5rem;
 }
+
+.product-price {
+  font-weight: bold;
+}
