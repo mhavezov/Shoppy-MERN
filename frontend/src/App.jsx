@@ -10,15 +10,16 @@ function App() {
   return (
     <>
       <Header />
-      <Switch>
-        <main className='py-3'>
-          <Container>
+
+      <main className='py-3'>
+        <Container>
+          <Switch>
             <Route exact path='/' component={HomePage} />
             <Route path='/products/:id' component={ProductsPage} />
-          </Container>
-        </main>
-        <Footer />
-      </Switch>
+          </Switch>
+        </Container>
+      </main>
+      <Footer />
     </>
   );
 }

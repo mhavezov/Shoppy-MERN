@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Rating = ({ value, text }) => {
   return (
@@ -67,11 +66,6 @@ const Rating = ({ value, text }) => {
       <span className='rating-text'>{text ? text : null}</span>
     </div>
   );
-};
-
-Rating.propTypes = {
-  value: PropTypes.number.isRequired,
-  text: PropTypes.string.isRequired,
 };
 
 export default Rating;
