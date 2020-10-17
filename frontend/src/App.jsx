@@ -8,6 +8,7 @@ import ProductsPage from './pages/ProductsPage';
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
 import RegisterUserPage from './pages/RegisterUserPage';
+import UserProfilePage from './pages/UserProfilePage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Switch>
             <Route path='/login' component={LoginPage} />
             <Route path='/register' component={RegisterUserPage} />
+            <Route path='/profile' component={UserProfilePage} />
             <Route path='/products/:id' component={ProductsPage} />
             <Route path='/cart/:id?' component={CartPage} />
             <Route exact path='/' component={HomePage} />
