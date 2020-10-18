@@ -30,7 +30,7 @@ const CartPage = ({ match, location, history }) => {
     dispatch(removeFromCart(id));
   };
 
-  const checkoutHandler = () => {
+  const handleCheckout = () => {
     history.push('/login?redirect=shipping');
   };
 
@@ -53,7 +53,10 @@ const CartPage = ({ match, location, history }) => {
                   <Col md={3}>
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
                   </Col>
-                  <Col md={2}>${item.price}</Col>
+                  <Col md={2}>
+                    {'\u20AC'}
+                    {item.price}
+                  </Col>
                   <Col md={2}>
                     <Form.Control
                       as='select'
@@ -104,7 +107,7 @@ const CartPage = ({ match, location, history }) => {
                 type='button'
                 className='btn-block'
                 disabled={cartItems.length === 0}
-                onClick={checkoutHandler}
+                onClick={handleCheckout}
               >
                 Proceed To Checkout
               </Button>
