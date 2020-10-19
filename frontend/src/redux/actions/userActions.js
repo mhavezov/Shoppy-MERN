@@ -13,6 +13,8 @@ import {
   USER_UPDATE_PROFILE_FAIL,
   USER_UPDATE_PROFILE_REQUEST,
   USER_UPDATE_PROFILE_SUCCESS,
+  USER_DETAILS_RESET,
+  MY_ORDERS_LIST_RESET,
 } from '../constants';
 
 export const login = (email, password) => async (dispatch) => {
@@ -52,6 +54,12 @@ export const logout = () => (dispatch) => {
   localStorage.removeItem('userInfo');
   dispatch({
     type: USER_LOGOUT,
+  });
+  dispatch({
+    type: USER_DETAILS_RESET,
+  });
+  dispatch({
+    type: MY_ORDERS_LIST_RESET,
   });
 };
 

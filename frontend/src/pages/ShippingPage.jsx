@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import FormContainer from '../components/FormContainer';
 import CheckoutBreadcrumbs from '../components/CheckoutBreadcrumbs';
 import { saveShippingDetails } from '../redux/actions/cartActions';
 
 const ShippingPage = ({ history }) => {
-  const cart = useSelector((state) => state.cart);
-  const { shippingDetails } = cart;
+  // const cart = useSelector((state) => state.cart);
+  // const { shippingDetails } = cart;
 
-  const [address, setAddress] = useState(shippingDetails.address);
-  const [city, setCity] = useState(shippingDetails.city);
-  const [postCode, setPostCode] = useState(shippingDetails.postCode);
-  const [country, setCountry] = useState(shippingDetails.country);
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [postCode, setPostCode] = useState('');
+  const [country, setCountry] = useState('');
 
   const dispatch = useDispatch();
 
@@ -30,6 +30,7 @@ const ShippingPage = ({ history }) => {
         <Form.Group controlId='address'>
           <Form.Label>Address</Form.Label>
           <Form.Control
+            name='address'
             type='text'
             placeholder='enter your address'
             value={address}
@@ -40,6 +41,7 @@ const ShippingPage = ({ history }) => {
         <Form.Group controlId='city'>
           <Form.Label>City</Form.Label>
           <Form.Control
+            name='city'
             type='text'
             placeholder='enter your city'
             value={city}
@@ -50,6 +52,7 @@ const ShippingPage = ({ history }) => {
         <Form.Group controlId='postCode'>
           <Form.Label>Post Code</Form.Label>
           <Form.Control
+            name='postCode'
             type='text'
             placeholder='enter your postcode'
             value={postCode}
@@ -60,6 +63,7 @@ const ShippingPage = ({ history }) => {
         <Form.Group controlId='country'>
           <Form.Label>Country</Form.Label>
           <Form.Control
+            name='country'
             type='text'
             placeholder='enter your country'
             value={country}
