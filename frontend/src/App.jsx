@@ -13,6 +13,8 @@ import ShippingPage from './pages/ShippingPage';
 import PaymentPage from './pages/PaymentPage';
 import PlaceOrderPage from './pages/PlaceOrderPage';
 import OrderPage from './pages/OrderPage';
+import UserListPage from './pages/UserListPage';
+import UserEditPage from './pages/UserEditPage';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path='/login' component={LoginPage} />
             <Route path='/register' component={RegisterUserPage} />
             <Route path='/profile' component={UserProfilePage} />
+            <Route path='/admin/userlist' component={UserListPage} />
+            <Route path='/admin/user/:id/edit' component={UserEditPage} />
             <Route path='/shipping' component={ShippingPage} />
             <Route path='/payment' component={PaymentPage} />
             <Route path='/placeorder' component={PlaceOrderPage} />
